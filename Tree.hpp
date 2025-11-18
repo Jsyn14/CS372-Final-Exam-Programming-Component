@@ -105,6 +105,7 @@ Tree<T,Compare> prune(Tree<T,Compare> const& tree) {
     return Tree<T,Compare>(copyWithoutLeaves(tree.root(), nullptr));
 }
 
+//******HERE IS THE SOLUTION*******
 template <typename T, typename Compare>
 SmartList<T> fringe(Tree<T,Compare> const& tree) {
     SmartList<T> out;
