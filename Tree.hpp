@@ -105,7 +105,7 @@ Tree<T,Compare> prune(Tree<T,Compare> const& tree) {
     return Tree<T,Compare>(copyWithoutLeaves(tree.root(), nullptr));
 }
 
-//******HERE IS THE SOLUTION*******
+//****** Here IS THE First SOLUTION*******
 template <typename T, typename Compare>
 SmartList<T> fringe(Tree<T,Compare> const& tree) {
     SmartList<T> out;
@@ -127,6 +127,7 @@ SmartList<T> fringe(Tree<T,Compare> const& tree) {
     return out;
 }
 
+//***** Here IS THE Second Solution *****
 template <typename T, typename Compare>
 bool hasSameFringe(Tree<T,Compare> const& a, Tree<T,Compare> const& b) {
     SmartList<T> fa = fringe(a), fb = fringe(b);
